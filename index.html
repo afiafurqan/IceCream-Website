@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malai | Ice Cream</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { malai: "#ec4899", blush: "#fdf2f8", rose: "#fbcfe8", cocoa: "#4a1d3a" }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-blush text-cocoa font-sans">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-20 bg-malai text-white shadow">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-5 py-4">
+      <a href="#home" class="text-3xl font-bold tracking-wide">Malai</a>
+
+      <nav class="hidden md:flex items-center gap-8 font-medium">
+        <a href="#product" class="hover:underline">Our Product</a>
+        <a href="#flavours" class="hover:underline">Sort of ice-cream</a>
+        <a href="#about" class="hover:underline">About Us</a>
+        <a href="#gallery" class="hover:underline">Gallery</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#special" class="hidden md:inline-block bg-white text-malai font-semibold px-5 py-2 rounded-full hover:bg-rose">Order Now</a>
+        <img src="./cart.png" alt="Cart" class="w-8 h-8">
+        <button id="menuBtn" class="md:hidden text-3xl leading-none" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <nav id="mobileMenu" class="hidden md:hidden flex-col gap-4 px-5 pb-5 font-medium bg-malai">
+      <a href="#product" class="block py-1">Our Product</a>
+      <a href="#flavours" class="block py-1">Sort of ice-cream</a>
+      <a href="#about" class="block py-1">About Us</a>
+      <a href="#gallery" class="block py-1">Gallery</a>
+      <a href="#special" class="inline-block bg-white text-malai font-semibold px-5 py-2 rounded-full w-fit">Order Now</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero-bg">
+    <div class="max-w-7xl mx-auto px-5 py-16 md:py-24 grid md:grid-cols-2 items-center gap-10">
+      <div class="text-center md:text-left">
+        <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold text-malai leading-none">ICE<br>CREAM</h1>
+        <p class="mt-6 text-lg max-w-md mx-auto md:mx-0">Creamy, dreamy scoops made from the finest locally sourced ingredients.</p>
+        <a href="#product" class="inline-block mt-8 bg-malai text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-pink-600">Order Now</a>
+      </div>
+      <div class="flex justify-center">
+        <img src="./hero-cup.png" alt="Ice cream cone" class="w-64 sm:w-80 lg:w-[26rem] drop-shadow-2xl">
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="product" class="max-w-7xl mx-auto px-5 py-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Product</h2>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <article class="card bg-white rounded-3xl overflow-hidden shadow-lg">
+        <div class="relative">
+          <img src="./chocolate-fudge.jpg" alt="Chocolate Fudge" class="w-full h-56 object-cover">
+          <span class="absolute top-3 right-3 bg-malai text-white font-semibold px-4 py-1 rounded-full">$56.89</span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-sm text-malai font-semibold">Flavoure</h3>
+          <h2 class="text-xl font-bold">Chocolate Fudge</h2>
+        </div>
+      </article>
+
+      <article class="card bg-white rounded-3xl overflow-hidden shadow-lg">
+        <div class="relative">
+          <img src="./strawberry-ripple.jpg" alt="Strawberry Riple" class="w-full h-56 object-cover">
+          <span class="absolute top-3 right-3 bg-malai text-white font-semibold px-4 py-1 rounded-full">$88.99</span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-sm text-malai font-semibold">Flavoure</h3>
+          <h2 class="text-xl font-bold">Strawberry Riple</h2>
+        </div>
+      </article>
+
+      <article class="card bg-white rounded-3xl overflow-hidden shadow-lg">
+        <div class="relative">
+          <img src="./tropical-mango.jpg" alt="Tropical Mango" class="w-full h-56 object-cover">
+          <span class="absolute top-3 right-3 bg-malai text-white font-semibold px-4 py-1 rounded-full">$11.99</span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-sm text-malai font-semibold">Flavoure</h3>
+          <h2 class="text-xl font-bold">Tropical Mango</h2>
+        </div>
+      </article>
+
+      <article class="card bg-white rounded-3xl overflow-hidden shadow-lg">
+        <div class="relative">
+          <img src="./pista.jpg" alt="Pista" class="w-full h-56 object-cover">
+          <span class="absolute top-3 right-3 bg-malai text-white font-semibold px-4 py-1 rounded-full">$28.99</span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-sm text-malai font-semibold">Flavoure</h3>
+          <h2 class="text-xl font-bold">Pista</h2>
+        </div>
+      </article>
+
+      <article class="card bg-white rounded-3xl overflow-hidden shadow-lg">
+        <div class="relative">
+          <img src="./caramel.jpg" alt="Caramel Coffee" class="w-full h-56 object-cover">
+          <span class="absolute top-3 right-3 bg-malai text-white font-semibold px-4 py-1 rounded-full">$79.00</span>
+        </div>
+        <div class="p-5">
+          <h3 class="text-sm text-malai font-semibold">Flavoure</h3>
+          <h2 class="text-xl font-bold">Caramel Coffee</h2>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- EXCLUSIVE FLAVOURS / GALLERY -->
+  <section id="flavours" class="bg-rose/40 py-16">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold">Malai Exclusive Flavours</h2>
+        <p class="mt-4">Our ice creams are a symphony of flavors and textures, created from the finest, locally sourced ingredients. With classic favorites like rich, velvety chocolate.</p>
+      </div>
+
+      <div id="gallery" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <article>
+          <img src="./rainbow.jpg" alt="Rainbow" class="w-full h-56 object-cover rounded-2xl mb-4">
+          <h3 class="text-sm text-malai font-semibold">Flavor</h3>
+          <h2 class="text-xl font-bold mb-2">Rainbow</h2>
+          <p class="text-sm">This could potentially be strawberry, bubblegum, or a creative flavor like pink lemonade. This is often associated with flavors like blue moon.</p>
+        </article>
+        <article>
+          <img src="./belgian-chocolate.jpg" alt="Belgian Chocolate" class="w-full h-56 object-cover rounded-2xl mb-4">
+          <h3 class="text-sm text-malai font-semibold">Flavor</h3>
+          <h2 class="text-xl font-bold mb-2">Belgain Chocolate</h2>
+          <p class="text-sm">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+        </article>
+        <article>
+          <img src="./strawberry-sweet.jpg" alt="Strawberry Sweet" class="w-full h-56 object-cover rounded-2xl mb-4">
+          <h3 class="text-sm text-malai font-semibold">Flavor</h3>
+          <h2 class="text-xl font-bold mb-2">Strawberry Sweet</h2>
+          <p class="text-sm">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+        </article>
+        <article>
+          <img src="./classic-vanilla.jpg" alt="Classic Vanilla" class="w-full h-56 object-cover rounded-2xl mb-4">
+          <h3 class="text-sm text-malai font-semibold">Flavor</h3>
+          <h2 class="text-xl font-bold mb-2">ClassicVanilla</h2>
+          <p class="text-sm">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+        </article>
+        <article>
+          <img src="./cotton-candy.jpg" alt="Cotton Candy" class="w-full h-56 object-cover rounded-2xl mb-4">
+          <h3 class="text-sm text-malai font-semibold">Flavor</h3>
+          <h2 class="text-xl font-bold mb-2">Cotton Candy</h2>
+          <p class="text-sm">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+        </article>
+        <article>
+          <img src="./mint.jpg" alt="Mint Ice Cream" class="w-full h-56 object-cover rounded-2xl mb-4">
+          <h3 class="text-sm text-malai font-semibold">Flavor</h3>
+          <h2 class="text-xl font-bold mb-2">Mint Ice Cream</h2>
+          <p class="text-sm">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL PRODUCT -->
+  <section id="about" class="max-w-7xl mx-auto px-5 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <img src="./cookies-and-cream.jpg" alt="Cookies and Cream" class="w-full rounded-3xl shadow-lg object-cover max-h-[28rem]">
+    <div>
+      <h3 class="text-malai font-semibold">MALAI SPECIAL</h3>
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">Cookies and Cream</h2>
+      <p class="text-sm mb-4">4 Reviews</p>
+      <p class="mb-6">"Velvety smooth ice cream packed with real Oreo chunks, crisp, intense, and full of layers. Every bite is a symphony of contrasts: icy meets rich, soft meets crunchy." Ice cream is a frozen dessert typically made from milk or cream that has been flavoured with a sweetener.</p>
+
+      <div class="flex flex-wrap gap-6 mb-6">
+        <div>
+          <label for="flavor" class="block font-semibold mb-1">Flavor</label>
+          <select id="flavor" class="border border-rose rounded-lg px-3 py-2 bg-white">
+            <option>Cookies and Cream</option>
+            <option>Vanilla</option>
+            <option>Chocolate</option>
+          </select>
+        </div>
+        <div>
+          <label for="size" class="block font-semibold mb-1">Size</label>
+          <select id="size" class="border border-rose rounded-lg px-3 py-2 bg-white">
+            <option>100ml</option>
+            <option>250ml</option>
+            <option>500ml</option>
+            <option>1000ml</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <span class="text-3xl font-bold">$58.00</span>
+        <a href="#special" class="bg-malai text-white font-semibold px-8 py-3 rounded-full hover:bg-pink-600">Order Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREMIUM -->
+  <section id="special" class="bg-malai text-white py-16">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold">Malai Premium</h2>
+        <p class="mt-4">"Scoop there it is!" to sweet quotes such as "Ice cream is a hug in a bowl". Elevate your photos with fun, short, and sugary phrases perfect for summer days. "Life's better with sprinkles on top".</p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-3">
+        <article class="bg-white text-cocoa rounded-3xl p-6 text-center shadow-lg">
+          <img src="./caramel-fig.jpg" alt="Caramel Fig" class="h-44 mx-auto object-contain mb-4">
+          <h2 class="text-xl font-bold mb-2">Caramel Fig</h2>
+          <p class="text-sm mb-5">Anjeer (fig) ice cream is a rich, creamy Indian-inspired dessert featuring blended dried figs, milk, and often cardamom, offering a subtle, natural sweetness.</p>
+          <a href="#" class="inline-block bg-malai text-white font-semibold px-6 py-2 rounded-full hover:bg-pink-600">Add To Cart</a>
+        </article>
+        <article class="bg-white text-cocoa rounded-3xl p-6 text-center shadow-lg">
+          <img src="./guava-bliss.jpg" alt="Guava Bliss" class="h-44 mx-auto object-contain mb-4">
+          <h2 class="text-xl font-bold mb-2">Guava Bliss</h2>
+          <p class="text-sm mb-5">Guava ice cream is a creamy, tropical dessert made by blending ripe guava pulp with cream, condensed milk, and optional sweeteners and colorings.</p>
+          <a href="#" class="inline-block bg-malai text-white font-semibold px-6 py-2 rounded-full hover:bg-pink-600">Add To Cart</a>
+        </article>
+        <article class="bg-white text-cocoa rounded-3xl p-6 text-center shadow-lg">
+          <img src="./almond-pop.jpg" alt="Almond Pop" class="h-44 mx-auto object-contain mb-4">
+          <h2 class="text-xl font-bold mb-2">Almond Pop</h2>
+          <p class="text-sm mb-5">A popular flavor in various cuisines, from Mediterranean-inspired, with a simple creamy base, to Roasted Almond, a commonly beloved flavor.</p>
+          <a href="#" class="inline-block bg-malai text-white font-semibold px-6 py-2 rounded-full hover:bg-pink-600">Add To Cart</a>
+        </article>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="#" class="inline-block bg-white text-malai font-semibold px-8 py-3 rounded-full hover:bg-rose">Order Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TACO ROLLED -->
+  <section class="max-w-7xl mx-auto px-5 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <div class="text-center md:text-left">
+      <h2 class="text-3xl md:text-4xl font-bold text-malai">Malai Special</h2>
+      <h3 class="text-xl font-semibold mt-2 mb-4">Taco Rolled Ice-cream</h3>
+      <p class="mb-6">A creative, customizable dessert featuring fresh, hand-rolled ice cream nestled inside a crispy, taco-shaped waffle shell. Often served in vibrant colors (red, blue, black), it combines cold, creamy, and crunchy textures with popular toppings like fruit, candy, and whipped cream.</p>
+      <a href="#" class="inline-block bg-malai text-white font-semibold px-8 py-3 rounded-full hover:bg-pink-600">Order Now</a>
+    </div>
+    <img src="./taco-rolled.jpg" alt="Taco rolled ice cream" class="w-full max-w-md mx-auto">
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-cocoa text-white">
+    <div class="max-w-7xl mx-auto px-5 py-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <h2 class="text-3xl font-bold text-malai mb-3">Malai</h2>
+        <p class="text-sm opacity-80">Karachi, Pakistan</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">Location</h3>
+        <img src="./location.png" alt="Location" class="w-10 h-10">
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">Links</h3>
+        <ul class="space-y-2 text-sm opacity-80">
+          <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+          <li><a href="#" class="hover:underline">Terms &amp; Conditions</a></li>
+          <li><a href="#" class="hover:underline">Cookies</a></li>
+          <li><a href="#" class="hover:underline">Reach Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">Subscribe</h3>
+        <p class="text-sm opacity-80 mb-3">Subscribing to the channel is the best way to support this work and see more content like it.</p>
+        <form class="flex gap-2" action="#" method="post">
+          <input type="email" placeholder="Your email" aria-label="Email" class="w-full rounded-full px-4 py-2 text-cocoa" required>
+          <button type="submit" class="bg-malai px-5 rounded-full font-semibold hover:bg-pink-600">Join</button>
+        </form>
+      </div>
+    </div>
+    <p class="text-center text-sm opacity-70 pb-6">&copy; 2026 Malai. All rights reserved.</p>
+  </footer>
+
+  <script>
+    var btn = document.getElementById("menuBtn");
+    var menu = document.getElementById("mobileMenu");
+    btn.addEventListener("click", function () {
+      var open = menu.classList.toggle("hidden") === false;
+      menu.classList.toggle("flex", open);
+      btn.setAttribute("aria-expanded", open);
+    });
+  </script>
+</body>
+</html>
